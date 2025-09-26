@@ -20,8 +20,6 @@
 
 <body>
 
-    <!-- HEADER: encabezado principal del sitio -->
-    <!-- 📝 sticky-top: Fija el header en la parte superior al hacer scroll -->
     <header class="sticky-top">
         <!-- NAV: barra de navegación con enlaces internos a secciones -->
         <!-- 
@@ -91,13 +89,29 @@
         </nav>
     </header>
 
-    <!-- MAIN: contenido principal (sólo un <main> por documento)-->
     <main>
-        <div class="container">
-            <!-- h1: sólo debe haber un h1 principal por página -->
-            <h1>Cafetería Chispas</h1>
-            <p class="muted">Café de especialidad y pan artesanal en Hermosillo.</p>
-        </div>
+        <!-- SECTION Galería con figure/figcaption -->
+        <section id="galeria" aria-labelledby="titulo-galeria">
+            <h2 id="titulo-galeria">Galería</h2>
+            <div class="grid grid-3">
+                <figure>
+                    <!-- width/height en HTML no son obligatorios pero ayudan al layout-->
+                    <img src="https://picsum.photos/seed/barista/480/320" alt="Barista preparando el café con máquina"
+                        width="100%" height="auto">
+                    <figcaption>Barista en acción</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://picsum.photos/seed/terrace/480/320" alt="Terraza del café con mesas y plantas"
+                        width="100%" height="auto">
+                    <figcaption>Nuestra terraza</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://picsum.photos/seed/beans/480/320" alt="Granos de café tostados en primer plano"
+                        width="100%" height="auto">
+                    <figcaption>Granos seleccionados</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER: información de cierre -->
@@ -115,10 +129,9 @@
             <small class="muted"> Sitio de ejemplo.</small>
         </div>
     </footer>
-
+    
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
-
 </html>

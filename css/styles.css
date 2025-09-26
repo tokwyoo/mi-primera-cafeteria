@@ -1,16 +1,28 @@
-nav {
-    background-color: #f9f6f1;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 #logo {
     width: auto;
-    height: 40px; /* XS - Móvil pequeño (default) */
+    height: 40px;
+}
+
+nav {
+    background-color: #f9f6f1;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+}
+
+nav h1 {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* SM - Móvil horizontal (576px+) */
 @media (min-width: 576px) {
     #logo {
         height: 42px;
+    }
+    nav h1 {
+        font-size: 1.25rem;
     }
 }
 
@@ -19,12 +31,18 @@ nav {
     #logo {
         height: 45px;
     }
+    nav h1 {
+        font-size: 1.50rem;
+    }
 }
 
 /* LG - Desktop (992px+) */
 @media (min-width: 992px) {
     #logo {
         height: 48px;
+    }
+    nav h1 {
+        font-size: 1.75rem;
     }
 }
 

@@ -20,8 +20,6 @@
 
 <body>
 
-    <!-- HEADER: encabezado principal del sitio -->
-    <!-- 📝 sticky-top: Fija el header en la parte superior al hacer scroll -->
     <header class="sticky-top">
         <!-- NAV: barra de navegación con enlaces internos a secciones -->
         <!-- 
@@ -91,13 +89,46 @@
         </nav>
     </header>
 
-    <!-- MAIN: contenido principal (sólo un <main> por documento)-->
     <main>
-        <div class="container">
-            <!-- h1: sólo debe haber un h1 principal por página -->
-            <h1>Cafetería Chispas</h1>
-            <p class="muted">Café de especialidad y pan artesanal en Hermosillo.</p>
-        </div>
+
+        <!-- SECTION Artículos: contenido principal + barra lateral -->
+        <section id="articulos" aria-labelledby="titulo-articulos">
+            <h2 id="titulo-articulos">Artículos del blog</h2>
+            <!-- grid-2 -->
+            <div class="grid-2">
+                <div>
+                    <!-- Dos artículos dentro de la sección -->
+                    <article>
+                        <h3>¿Qué es un espresso perfecto?</h3>
+                        <!-- time con atributo datetime ayuda a máquinas -->
+                        <p class="muted"><time datetime="2025-08-26">agosto de 2025</time> * 3 min de lectura</p>
+                        <p>Un espresso perfecto equilibra aroma, cuerpo y acidez. Factores clave incluyen molienda,
+                            presión y temperatura.</p>
+                        <!-- Enlace "leer más" podría llevar a otra página (aquí simulamos con #)-->
+                        <p><a href="#leer-mas-espresso">Leer más</a></p>
+                    </article>
+                    <article>
+                        <h3>De la finca a tu taza</h3>
+                        <p class="muted"><time datetime="2025-08-10">agosto de 2025</time> * 4 min de lectura</p>
+                        <p>El viaje del café inicia con la selección de granos, seguido de procesos de secado, tueste y
+                            molienda.</p>
+                        <p><a href="#leer-mas-finca">Leer más</a></p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ASIDE: contenido complementario-->
+            <aside aria-label="Información adicional">
+                <h4>Horarios y ubicación</h4>
+                <!-- address: datos de contacto/ubicación; no es para cualquier dirección postal genérica-->
+                <address>
+                    Blvd. Universidad 76, Hermosillo, Sonora<br>
+                    Lun-Sáb: 8:00-20:00 * Dom: 9:00-14:00
+                </address>
+                <p class="muted">Wi-Fi gratis * Pet friendly * Terraza</p>
+            </aside>
+        </section>
+
     </main>
 
     <!-- FOOTER: información de cierre -->
@@ -117,8 +148,7 @@
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
