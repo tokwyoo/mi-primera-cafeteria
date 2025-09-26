@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- HEADER: encabezado principal del sitio -->
     <!-- 📝 sticky-top: Fija el header en la parte superior al hacer scroll -->
@@ -92,7 +92,7 @@
     </header>
 
     <!-- MAIN: contenido principal (sólo un <main> por documento)-->
-    <main>
+    <main class="flex-grow-1">
         <div class="container">
             <!-- h1: sólo debe haber un h1 principal por página -->
             <h1>Cafetería Chispas</h1>
@@ -101,20 +101,25 @@
     </main>
 
     <!-- FOOTER: información de cierre -->
-    <footer>
-        <div class="container">
-            <p><span id="anio">2025</span> Cafetería Chispas * Todos los derechos reservados</p>
-            <!-- Enlaces secundarios (políticas/aviso) podrían ir por aquí-->
-            <nav aria-label="Navegación secundaria">
-                <ul style="color:aqua">
-                    <li><a href="#aviso" style="color:#9ad">Aviso de privacidad</a></li>
-                    <li><a href="#terminos" style="color:#9ad">Térmidos de uso</a></li>
-                </ul>
-            </nav>
-            <!-- Tip: este <small> es para notas o créditos menores-->
-            <small class="muted"> Sitio de ejemplo.</small>
+    <footer class="mt-auto py-5">
+        <div class="container text-center">
+            
+            <!-- Texto principal -->
+            <p class="mb-1"><span id="anio">&copy 2025</span> Cafetería Chispas</p>
+            <p class="mb-2">Todos los derechos reservados</p>
+            
+            <ul class="navbar-nav d-flex flex-row gap-2 justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link p-0 custom-footer-nav-link" href="#aviso">Aviso de privacidad</a>
+                </li>
+                <span>|</span>
+                <li class="nav-item">
+                    <a class="nav-link p-0 custom-footer-nav-link" href="#terminos">Términos de uso</a>
+                </li>
+            </ul>
         </div>
     </footer>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"></script>
