@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe xd</title>
+    <title>Cafetería Chispas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/styles.css">
+
 </head>
+
 <body>
     <!-- HEADER: encabezado principal del sitio -->
     <header>
-        <div class="container">
-            <!-- h1: sólo debe haber un h1 principal por página -->
-            <h1>Cafetería xd</h1>
-            <p class="muted">Café de especialidad y pan artesanal en Hermosillo.</p>
-        </div>
         <!-- NAV: barra de navegación con enlaces internos a secciones -->
-        <nav aria-label="Navegación principal">
-            <ul>
-                <!-- href="#menu" apunta a id="menu" más abajo -->
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#articulos">Artículos</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+        <nav aria-label="Navegación principal" class="navbar navbar-expand-lg">
+            <div class="container"> 
+                <!-- Logo de la página --> 
+                <a class="navbar-brand" href="#"> 
+                    <img id="logo" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
+                </a>
+                
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Links colapsables -->
+                <div class="collapse navbar-collapse" id="navbar_nav">
+                    <ul class="navbar-nav text-center mx-auto mx-lg-0 ms-lg-auto"> <!-- Cambios aquí -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#articulos">Artículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- MAIN: contenido principal (sólo un <main> por documento)-->
     <main>
+        <div class="container">
+            <!-- h1: sólo debe haber un h1 principal por página -->
+            <h1>Cafetería Chispas</h1>
+            <p class="muted">Café de especialidad y pan artesanal en Hermosillo.</p>
+        </div>
+
         <section id="menu" aria-labelledby="titulo-menu">
             <h2 id="titulo-menu">Nuestro menú</h2>
             <p class="muted">Bebidas y panes del día.</p>
 
             <!-- ARTICLE: cada producto destacado puede ser un "contenido independiente" -->
-             <div class="grid grid-3">
+            <div class="grid grid-3">
                 <article>
                     <!-- figure: imagen con pie descriptivo para lectores de pantalla o si la imagen no carga -->
                     <figure>
-                        <img src="https://picsum.photos/seed/espresso/480/320" alt="Espresso servido en taza cerámica" width="100%" height="auto">
+                        <img src="https://picsum.photos/seed/espresso/480/320" alt="Espresso servido en taza cerámica"
+                            width="100%" height="auto">
                         <figcaption>Espresso simple</figcaption>
                     </figure>
                     <h3>Espresso</h3>
                     <p>Extracción precisa, tueste medio. <span class="pill">Nuevo</span></p>
                     <!-- Tabla sencilla para precio/tamaño -->
-                     <table>
+                    <table>
                         <thead>
                             <tr>
                                 <th>Tamaño</th>
@@ -59,7 +94,7 @@
                                 <td>$35</td>
                             </tr>
                         </tbody>
-                     </table>
+                    </table>
                 </article>
 
                 <article>
@@ -69,7 +104,7 @@
                     </figure>
                     <h3>Latte</h3>
                     <p>Suave, con leche vaporizada.</p>
-                     <table>
+                    <table>
                         <thead>
                             <tr>
                                 <th>Tamaño</th>
@@ -86,17 +121,18 @@
                                 <td>$65</td>
                             </tr>
                         </tbody>
-                     </table>
+                    </table>
                 </article>
 
                 <article>
                     <figure>
-                        <img src="https://picsum.photos/seed/croissant/480/320" alt="Croissant" width="100%" height="auto">
+                        <img src="https://picsum.photos/seed/croissant/480/320" alt="Croissant" width="100%"
+                            height="auto">
                         <figcaption>Croissant</figcaption>
                     </figure>
                     <h3>Croissant</h3>
                     <p>Hojaldre crujiente y mantequilla de alta calidad.</p>
-                     <table>
+                    <table>
                         <thead>
                             <tr>
                                 <th>Variante</th>
@@ -113,10 +149,10 @@
                                 <td>$45</td>
                             </tr>
                         </tbody>
-                     </table>
+                    </table>
                 </article>
-                
-             </div>
+
+            </div>
         </section>
 
         <!-- SECTION Artículos: contenido principal + barra lateral -->
@@ -130,29 +166,31 @@
                         <h3>¿Qué es un espresso perfecto?</h3>
                         <!-- time con atributo datetime ayuda a máquinas -->
                         <p class="muted"><time datetime="2025-08-26">agosto de 2025</time> * 3 min de lectura</p>
-                        <p>Un espresso perfecto equilibra aroma, cuerpo y acidez. Factores clave incluyen molienda, presión y temperatura.</p>
+                        <p>Un espresso perfecto equilibra aroma, cuerpo y acidez. Factores clave incluyen molienda,
+                            presión y temperatura.</p>
                         <!-- Enlace "leer más" podría llevar a otra página (aquí simulamos con #)-->
                         <p><a href="#leer-mas-espresso">Leer más</a></p>
                     </article>
                     <article>
                         <h3>De la finca a tu taza</h3>
                         <p class="muted"><time datetime="2025-08-10">agosto de 2025</time> * 4 min de lectura</p>
-                        <p>El viaje del café inicia con la selección de granos, seguido de procesos de secado, tueste y molienda.</p>
+                        <p>El viaje del café inicia con la selección de granos, seguido de procesos de secado, tueste y
+                            molienda.</p>
                         <p><a href="#leer-mas-finca">Leer más</a></p>
                     </article>
                 </div>
             </div>
 
             <!-- ASIDE: contenido complementario-->
-             <aside aria-label="Información adicional">
-                 <h4>Horarios y ubicación</h4>
+            <aside aria-label="Información adicional">
+                <h4>Horarios y ubicación</h4>
                 <!-- address: datos de contacto/ubicación; no es para cualquier dirección postal genérica-->
-                 <address>
-                     Blvd. Universidad 76, Hermosillo, Sonora<br>
-                     Lun-Sáb: 8:00-20:00 * Dom: 9:00-14:00
-                 </address>
-                 <p class="muted">Wi-Fi gratis * Pet friendly * Terraza</p>
-             </aside>
+                <address>
+                    Blvd. Universidad 76, Hermosillo, Sonora<br>
+                    Lun-Sáb: 8:00-20:00 * Dom: 9:00-14:00
+                </address>
+                <p class="muted">Wi-Fi gratis * Pet friendly * Terraza</p>
+            </aside>
         </section>
 
         <!-- SECTION Galería con figure/figcaption -->
@@ -161,15 +199,18 @@
             <div class="grid grid-3">
                 <figure>
                     <!-- width/height en HTML no son obligatorios pero ayudan al layout-->
-                    <img src="https://picsum.photos/seed/barista/480/320" alt="Barista preparando el café con máquina" width="100%" height="auto">
+                    <img src="https://picsum.photos/seed/barista/480/320" alt="Barista preparando el café con máquina"
+                        width="100%" height="auto">
                     <figcaption>Barista en acción</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://picsum.photos/seed/terrace/480/320" alt="Terraza del café con mesas y plantas" width="100%" height="auto">
+                    <img src="https://picsum.photos/seed/terrace/480/320" alt="Terraza del café con mesas y plantas"
+                        width="100%" height="auto">
                     <figcaption>Nuestra terraza</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://picsum.photos/seed/beans/480/320" alt="Granos de café tostados en primer plano" width="100%" height="auto">
+                    <img src="https://picsum.photos/seed/beans/480/320" alt="Granos de café tostados en primer plano"
+                        width="100%" height="auto">
                     <figcaption>Granos seleccionados</figcaption>
                 </figure>
             </div>
@@ -192,11 +233,12 @@
                 </div>
                 <div>
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"
+                        required></textarea>
                 </div>
                 <!-- button type="submit" envía el formulario -->
                 <button type="submit">Enviar</button>
-                    <!-- Nota didáctica: action="#" no envía a ningún servidor: es un demo local -->
+                <!-- Nota didáctica: action="#" no envía a ningún servidor: es un demo local -->
             </form>
         </section>
     </main>
@@ -204,17 +246,24 @@
     <!-- FOOTER: información de cierre -->
     <footer>
         <div class="container">
-            <p><span id="anio">2025</span> Cafetería xd * Todos los derechos reservados</p>
+            <p><span id="anio">2025</span> Cafetería Chispas * Todos los derechos reservados</p>
             <!-- Enlaces secundarios (políticas/aviso) podrían ir por aquí-->
-             <nav aria-label="Navegación secundaria">
+            <nav aria-label="Navegación secundaria">
                 <ul style="color:aqua">
                     <li><a href="#aviso" style="color:#9ad">Aviso de privacidad</a></li>
                     <li><a href="#terminos" style="color:#9ad">Térmidos de uso</a></li>
                 </ul>
-             </nav>
+            </nav>
             <!-- Tip: este <small> es para notas o créditos menores-->
             <small class="muted"> Sitio de ejemplo.</small>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>

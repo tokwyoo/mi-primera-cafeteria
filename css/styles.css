@@ -1,0 +1,43 @@
+nav {
+    background-color: #f9f6f1;
+}
+
+#logo {
+    width: auto;
+    height: 40px; /* XS - Móvil pequeño (default) */
+}
+
+/* SM - Móvil horizontal (576px+) */
+@media (min-width: 576px) {
+    #logo {
+        height: 42px;
+    }
+}
+
+/* MD - Tablet (768px+) */
+@media (min-width: 768px) {
+    #logo {
+        height: 45px;
+    }
+}
+
+/* LG - Desktop (992px+) */
+@media (min-width: 992px) {
+    #logo {
+        height: 48px;
+    }
+}
+
+/* XL - Desktop grande (1200px+) */
+@media (min-width: 1200px) {
+    #logo {
+        height: 50px;
+    }
+}
+
+/* XXL - Desktop extra grande (1400px+) */
+@media (min-width: 1400px) {
+    #logo {
+        height: 52px;
+    }
+}
