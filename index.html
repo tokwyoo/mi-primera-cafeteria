@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetería Chispas</title>
-    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="./css/styles.css">
-    
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./img/favicon.png">
-
+    <link rel="icon" type="image/png" href="./img/logo.png">
 </head>
 
+<!-- 
+📝 d-flex: Activa flexbox en el body
+📝 flex-column: Dirección vertical (header, main, footer apilados)
+📝 min-vh-100: Altura mínima del 100% del viewport (pantalla completa)
+-->
 <body class="d-flex flex-column min-vh-100">
-
+    
     <!-- HEADER: encabezado principal del sitio -->
     <!-- 📝 sticky-top: Fija el header en la parte superior al hacer scroll -->
     <header class="sticky-top">
@@ -32,31 +32,52 @@
         <nav aria-label="Navegación principal" class="navbar navbar-expand-lg shadow">
             <!-- 📝 container: Centra el contenido y añade padding responsivo según el tamaño de pantalla -->
             <div class="container"> 
-                <!-- Logo de la página --> 
+                <!-- Contenedor principal con flexbox para controlar distribución del espacio -->
                 <!-- 
                 📝 d-flex: Activa flexbox (elementos hijos se alinean horizontalmente)
                 📝 align-items-center: Alineación vertical al centro dentro del flexbox
+                📝 w-100: Ancho 100% (usa todo el espacio disponible del container)
                 -->
-                <div class="d-flex align-items-center">
-                    <!-- 📝 navbar-brand: Estilos específicos para logo/marca en navbar (font-size, padding) -->
-                    <a class="navbar-brand" href="./index.html"> 
-                    <!-- 📝 me-2: Margin-end de 0.5rem -->
-                    <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
-                    </a>
-                    <h1>Cafetería Chispas</h1> 
+                <div class="d-flex align-items-center w-100">
+                    <!-- Logo fijo (no crece ni se encoge) -->
+                    <!-- 📝 flex-shrink-0: No permite que este elemento se encoja (tamaño fijo) -->
+                    <div class="flex-shrink-0">
+                        <!-- 📝 navbar-brand: Estilos específicos para logo/marca en navbar (font-size, padding) -->
+                        <a class="navbar-brand" href="./index.html"> 
+                            <!-- 📝 me-2: Margin-end de 0.5rem -->
+                            <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
+                        </a>
+                    </div>
+                    <!-- Título flexible (crece hasta llenar espacio disponible, luego trunca) -->
+                    <!-- 
+                    📝 flex-grow-1: Crece para llenar todo el espacio disponible restante
+                    📝 text-truncate: Añade "..." cuando el contenido se desborda
+                    📝 me-2: Margin-end para separar del siguiente elemento
+                    -->
+                    <div class="flex-grow-1 text-truncate me-2">
+                        <!-- 
+                        📝 mb-0: Margin-bottom 0 (quita espaciado por defecto del h1)
+                        📝 text-truncate: Añade "..." cuando el texto no cabe
+                        -->
+                        <span class="fs-4 fs-lg-2 mb-0 text-truncate">Cafetería Chispas</>
+                    </div>
+                    <!-- Botón hamburguesa fijo (solo móviles) -->
+                    <!-- 
+                    📝 flex-shrink-0: No se encoge (tamaño fijo)
+                    📝 d-lg-none: Solo visible en pantallas menores a lg (oculto en desktop)
+                    -->
+                    <div class="flex-shrink-0 d-lg-none">
+                        <!-- 
+                        📝 navbar-toggler: Botón hamburguesa que aparece en móviles
+                        📝 data-bs-toggle="collapse": Activa el colapso de Bootstrap
+                        📝 data-bs-target="#navbar_nav": Especifica qué elemento colapsar
+                        -->
+                        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
+                            <!-- 📝 navbar-toggler-icon: Ícono de hamburguesa (3 líneas) -->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- Botón hamburguesa -->
-                <!-- 
-                📝 navbar-toggler: Botón hamburguesa que aparece en móviles
-                📝 data-bs-toggle="collapse": Activa el colapso de Bootstrap
-                📝 data-bs-target="#navbar_nav": Especifica qué elemento colapsar
-                -->
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
-                    <!-- 📝 navbar-toggler-icon: Ícono de hamburguesa (3 líneas) -->
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
                 <!-- Links colapsables -->
                 <!-- 
                 📝 collapse: Elemento que se oculta/muestra
@@ -91,35 +112,116 @@
         </nav>
     </header>
 
-    <!-- MAIN: contenido principal (sólo un <main> por documento)-->
-    <main class="flex-grow-1">
+    <!-- MAIN: contenido principal -->
+     <!-- 
+    📝 flex-grow-1: Crece para ocupar todo el espacio disponible restante (empuja el footer hacia abajo)
+    📝 custom-home-background: Clase personalizada que añade imagen de fondo con overlay oscuro
+    📝 d-flex: Activa flexbox (convierte main en contenedor flex)
+    📝 align-items-center: Centra verticalmente todo el contenido dentro del main
+    📝 py-5: Padding vertical de 3rem (arriba y abajo) para espaciado respiratorio
+    -->
+    <main class="flex-grow-1 custom-home-background d-flex align-items-center py-5">
         <div class="container">
-            <!-- h1: sólo debe haber un h1 principal por página -->
-            <h1>Cafetería Chispas</h1>
-            <p class="muted">Café de especialidad y pan artesanal en Hermosillo.</p>
+            <!-- 
+            📝 custom-main-content: Clase personalizada para el contenedor principal
+            📝 d-flex: Flexbox horizontal (vertical en móviles con CSS personalizado)
+            📝 align-items-center: Centra verticalmente
+            📝 justify-content-center: Centra horizontalmente  
+            📝 gap-5: Espacio de 3rem entre elementos
+            -->
+            <div class="d-flex align-items-center justify-content-center gap-5 custom-main-content">
+                <div class="d-flex flex-column custom-text-section">
+                    <h1 class="display-1">Cafetería Chispas</h1>
+                    <p class="muted display-6">Café de especialidad y pan artesanal en Hermosillo</p>
+                </div>
+                <div>
+                    <!-- 
+                    📝 custom-carousel-container: Contenedor responsivo del carousel
+                    📝 rounded-4: Bordes muy redondeados
+                    📝 shadow-lg: Sombra grande
+                    📝 overflow-hidden: Oculta desbordamientos para bordes redondeados
+                    -->
+                    <div id="carouselExampleSlidesOnly" 
+                        class="carousel slide rounded-4 shadow-lg overflow-hidden custom-carousel-container" 
+                        data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></button>
+                            <button data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></button>
+                            <button data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"></button>
+                            <button data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="3"></button>
+                        </div>
+                        <!-- 📝 custom-carousel-inner: Contenedor interno responsivo -->
+                        <div class="carousel-inner custom-carousel-inner">
+                            <div class="carousel-item active">
+                                <!-- 📝 custom-carousel-img: Imagen responsiva con aspect ratio fijo -->
+                                <img src="./img/carousel/pic1.jpeg" 
+                                    class="d-block custom-carousel-img" 
+                                    alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/carousel/pic2.webp" 
+                                    class="d-block custom-carousel-img" 
+                                    alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/carousel/pic3.webp" 
+                                    class="d-block custom-carousel-img" 
+                                    alt="Imagen 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/carousel/pic4.webp" 
+                                    class="d-block custom-carousel-img" 
+                                    alt="Imagen 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
     <!-- FOOTER: información de cierre -->
+    <!-- 
+    📝 mt-auto: Margen-top automático (empuja el footer al final en un contenedor flex)
+    📝 py-5: Padding vertical de 3rem (arriba y abajo)
+    -->
     <footer class="mt-auto py-5">
+        <!-- 
+        📝 container: Centra el contenido y añade padding responsivo
+        📝 text-center: Alinea todo el texto al centro
+        -->
         <div class="container text-center">
-            
             <!-- Texto principal -->
+            <!-- 📝 mb-1: Margin-bottom de 0.25rem -->
             <p class="mb-1"><span id="anio">&copy 2025</span> Cafetería Chispas</p>
+            <!-- 📝 mb-2: Margin-bottom de 0.5rem -->
             <p class="mb-2">Todos los derechos reservados</p>
-            
-            <ul class="navbar-nav d-flex flex-row gap-2 justify-content-center">
+            <!-- 
+            📝 navbar-nav: Reutiliza estilos de navegación (lista sin bullets, flex)
+            📝 d-flex: Activa flexbox
+            📝 flex-row: Elementos hijos en fila horizontal (por defecto, pero explícito)
+            📝 gap-2: Espacio de 0.5rem entre elementos flexbox
+            📝 justify-content-center: Centra horizontalmente los elementos flex
+            -->
+            <ul class="navbar-nav d-flex flex-row gap-2 justify-content-center mb-2">
+                <!-- 📝 nav-item: Contenedor de elemento de navegación -->
                 <li class="nav-item">
+                    <!-- 
+                    📝 nav-link: Estilos base de enlace de navegación
+                    📝 p-0: Padding 0 en todos los lados (quita el padding por defecto)
+                    📝 custom-footer-nav-link: Clase personalizada para estilos específicos del footer
+                    -->
                     <a class="nav-link p-0 custom-footer-nav-link" href="#aviso">Aviso de privacidad</a>
                 </li>
+                <!-- Separador visual entre enlaces -->
                 <span>|</span>
                 <li class="nav-item">
                     <a class="nav-link p-0 custom-footer-nav-link" href="#terminos">Términos de uso</a>
                 </li>
             </ul>
+            <small class="">Página web hecha por Elda Berenice Matus Valencia para la materia de Diseño de Front-End</small>
         </div>
     </footer>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"></script>

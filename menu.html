@@ -20,58 +20,28 @@
 
 <body class="d-flex flex-column min-vh-100">
 
+    <!-- HEADER: encabezado principal del sitio -->
     <header class="sticky-top">
-        <!-- NAV: barra de navegación con enlaces internos a secciones -->
-        <!-- 
-        📝 navbar: Estructura base de barra de navegación con padding y flexbox
-        📝 navbar-expand-lg: Menú horizontal en pantallas grandes (992px+), colapsado en móviles  
-        📝 shadow: Añade sombra debajo del elemento
-        -->
         <nav aria-label="Navegación principal" class="navbar navbar-expand-lg shadow">
-            <!-- 📝 container: Centra el contenido y añade padding responsivo según el tamaño de pantalla -->
             <div class="container"> 
-                <!-- Logo de la página --> 
-                <!-- 
-                📝 d-flex: Activa flexbox (elementos hijos se alinean horizontalmente)
-                📝 align-items-center: Alineación vertical al centro dentro del flexbox
-                -->
-                <div class="d-flex align-items-center">
-                    <!-- 📝 navbar-brand: Estilos específicos para logo/marca en navbar (font-size, padding) -->
-                    <a class="navbar-brand" href="./index.html"> 
-                    <!-- 📝 me-2: Margin-end de 0.5rem -->
-                    <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
-                    </a>
-                    <h1>Cafetería Chispas</h1> 
+                <div class="d-flex align-items-center w-100">
+                    <div class="flex-shrink-0">
+                        <a class="navbar-brand" href="./index.html"> 
+                            <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
+                        </a>
+                    </div>
+                    <div class="flex-grow-1 text-truncate me-2">
+                        <span class="fs-4 fs-lg-2 mb-0 text-truncate">Cafetería Chispas</>
+                    </div>
+                    <div class="flex-shrink-0 d-lg-none">
+                        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- Botón hamburguesa -->
-                <!-- 
-                📝 navbar-toggler: Botón hamburguesa que aparece en móviles
-                📝 data-bs-toggle="collapse": Activa el colapso de Bootstrap
-                📝 data-bs-target="#navbar_nav": Especifica qué elemento colapsar
-                -->
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
-                    <!-- 📝 navbar-toggler-icon: Ícono de hamburguesa (3 líneas) -->
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- Links colapsables -->
-                <!-- 
-                📝 collapse: Elemento que se oculta/muestra
-                📝 navbar-collapse: Estilos específicos para colapso de navbar
-                -->
                 <div class="collapse navbar-collapse" id="navbar_nav">
-                    <!-- 
-                    📝 navbar-nav: Lista de navegación estilizada
-                    📝 text-center: Centra el texto
-                    📝 mx-auto: Márgenes horizontales automáticos (centra)
-                    📝 mx-lg-0: En pantallas grandes (lg+), quita márgenes horizontales
-                    📝 ms-lg-auto: En pantallas grandes, margen-start automático (empuja a la derecha)
-                    -->
                     <ul class="navbar-nav text-center mx-auto mx-lg-0 ms-lg-auto">
-                        <!-- 📝 nav-item: Contenedor de cada elemento de navegación -->
                         <li class="nav-item">
-                            <!-- 📝 nav-link: Estiliza los enlaces de navegación -->
                             <a class="nav-link" href="./menu.html">Menú</a>
                         </li>
                         <li class="nav-item">
@@ -89,7 +59,9 @@
         </nav>
     </header>
 
-    <main>
+    <!-- MAIN: contenido principal (sólo un <main> por documento)-->
+    <main class="flex-grow-1">
+
         <section id="menu" aria-labelledby="titulo-menu">
             <h2 id="titulo-menu">Nuestro menú</h2>
             <p class="muted">Bebidas y panes del día.</p>
@@ -186,18 +158,20 @@
     </main>
 
     <!-- FOOTER: información de cierre -->
-    <footer>
-        <div class="container">
-            <p><span id="anio">2025</span> Cafetería Chispas * Todos los derechos reservados</p>
-            <!-- Enlaces secundarios (políticas/aviso) podrían ir por aquí-->
-            <nav aria-label="Navegación secundaria">
-                <ul style="color:aqua">
-                    <li><a href="#aviso" style="color:#9ad">Aviso de privacidad</a></li>
-                    <li><a href="#terminos" style="color:#9ad">Térmidos de uso</a></li>
-                </ul>
-            </nav>
-            <!-- Tip: este <small> es para notas o créditos menores-->
-            <small class="muted"> Sitio de ejemplo.</small>
+    <footer class="mt-auto py-5">
+        <div class="container text-center">
+            <p class="mb-1"><span id="anio">&copy 2025</span> Cafetería Chispas</p>
+            <p class="mb-2">Todos los derechos reservados</p>
+            <ul class="navbar-nav d-flex flex-row gap-2 justify-content-center mb-2">
+                <li class="nav-item">
+                    <a class="nav-link p-0 custom-footer-nav-link" href="#aviso">Aviso de privacidad</a>
+                </li>
+                <span>|</span>
+                <li class="nav-item">
+                    <a class="nav-link p-0 custom-footer-nav-link" href="#terminos">Términos de uso</a>
+                </li>
+            </ul>
+            <small class="">Página web hecha por Elda Berenice Matus Valencia para la materia de Diseño de Front-End</small>
         </div>
     </footer>
     

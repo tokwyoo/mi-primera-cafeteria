@@ -27,6 +27,93 @@ footer ul li {
     color: #cdbda8;
 }
 
+main {
+    color: #f9f6f1;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.custom-home-background {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Overlay oscuro */
+        url('../img/roger-varenhorst-5DihazcyBAg-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+#logo {
+    width: auto;
+    height: 40px;
+}
+
+header {
+    background-color: #f9f6f1;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #212529;
+    color: #f9f6f1;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1rem;
+}
+
+footer ul li {
+    color: #cdbda8;
+}
+
+.custom-home-background {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../img/roger-varenhorst-5DihazcyBAg-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Carousel - Estilos base (móvil first) */
+.custom-carousel-container {
+    width: 100%;
+    max-width: 95vw;
+}
+
+.custom-carousel-inner {
+    width: 100%;
+    height: calc(95vw * 0.75); /* Ratio 4:3 basado en 95vw */
+    max-height: calc(95vw * 0.75);
+    overflow: hidden;
+}
+
+.custom-carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.custom-main-content {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    text-align: center;
+}
+
+.custom-text-section h1 {
+    font-size: 2rem !important;
+}
+
+.custom-text-section p {
+    font-size: 1rem !important;
+}
+
 /* SM - Móvil horizontal (576px+) */
 @media (min-width: 576px) {
     #logo {
@@ -34,6 +121,20 @@ footer ul li {
     }
     header h1 {
         font-size: 1.25rem;
+    }
+    
+    .custom-carousel-container {
+        max-width: 90vw;
+    }
+    .custom-carousel-inner {
+        height: calc(90vw * 0.75); /* Ratio 4:3 basado en 90vw */
+        max-height: calc(90vw * 0.75);
+    }
+    .custom-text-section h1 {
+        font-size: 2.5rem !important;
+    }
+    .custom-text-section p {
+        font-size: 1.25rem !important;
     }
 }
 
@@ -45,6 +146,27 @@ footer ul li {
     header h1 {
         font-size: 1.50rem;
     }
+    
+    .custom-carousel-container {
+        max-width: 25rem;
+    }
+    .custom-carousel-inner {
+        height: calc(25rem * 0.75); /* Ratio 4:3 basado en 25rem */
+        max-height: calc(25rem * 0.75);
+    }
+    
+    /* Cambio a layout horizontal */
+    .custom-main-content {
+        flex-direction: row !important;
+        gap: 3rem !important;
+        text-align: left;
+    }
+    .custom-text-section h1 {
+        font-size: 3rem !important;
+    }
+    .custom-text-section p {
+        font-size: 1.5rem !important;
+    }
 }
 
 /* LG - Desktop (992px+) */
@@ -55,6 +177,17 @@ footer ul li {
     header h1 {
         font-size: 1.75rem;
     }
+    
+    .custom-carousel-container {
+        max-width: 28rem;
+    }
+    .custom-carousel-inner {
+        height: calc(28rem * 0.75);
+        max-height: calc(28rem * 0.75);
+    }
+    .custom-main-content {
+        gap: 4rem !important;
+    }
 }
 
 /* XL - Desktop grande (1200px+) */
@@ -62,11 +195,30 @@ footer ul li {
     #logo {
         height: 50px;
     }
+    
+    .custom-carousel-container {
+        max-width: 31.25rem;
+    }
+    .custom-carousel-inner {
+        height: calc(31.25rem * 0.75);
+        max-height: calc(31.25rem * 0.75);
+    }
+    .custom-main-content {
+        gap: 5rem !important;
+    }
 }
 
 /* XXL - Desktop extra grande (1400px+) */
 @media (min-width: 1400px) {
     #logo {
         height: 52px;
+    }
+    
+    .custom-carousel-container {
+        max-width: 35rem;
+    }
+    .custom-carousel-inner {
+        height: calc(35rem * 0.75);
+        max-height: calc(35rem * 0.75);
     }
 }
