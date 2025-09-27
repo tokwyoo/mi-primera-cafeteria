@@ -2,36 +2,34 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafetería Chispas</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
-    <!-- CSS personalizado -->
-    <link rel="stylesheet" href="./css/styles.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./img/favicon.png">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-
     <!-- HEADER: encabezado principal del sitio -->
     <header class="sticky-top">
         <nav aria-label="Navegación principal" class="navbar navbar-expand-lg shadow">
-            <div class="container"> 
+            <div class="container">
                 <div class="d-flex align-items-center w-100">
                     <div class="flex-shrink-0">
-                        <a class="navbar-brand" href="./index.html"> 
-                            <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
+                        <a class="navbar-brand" href="./index.html">
+                            <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas" />
                         </a>
                     </div>
                     <div class="flex-grow-1 text-truncate me-2">
-                        <span class="fs-4 fs-lg-2 mb-0 text-truncate">Cafetería Chispas</>
+                        <span class="fs-4 fs-lg-2 mb-0 text-truncate">Cafetería Chispas</span>
                     </div>
                     <div class="flex-shrink-0 d-lg-none">
                         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
@@ -59,76 +57,74 @@
         </nav>
     </header>
 
-    <!-- MAIN: contenido principal (sólo un <main> por documento) -->
+    <!-- 📝 flex-grow-1: Hace que el <main> ocupe todo el espacio restante en el layout
+    📝 custom-background: Clase personalizada para dar un fondo distinto a esta sección 
+    -->
     <main class="flex-grow-1 custom-background">
         <!-- 
-        📝 flex-grow-1: Hace que el <main> ocupe todo el espacio restante en el layout
-        📝 custom-background: Clase personalizada para dar un fondo distinto a esta sección
+        📝 section: bloque de menú
+        📝 id="menu": ancla para navegación interna
+        📝 aria-labelledby: vincula accesiblemente la sección con su título
+        📝 container: centra y aplica márgenes/padding responsivos
+        📝 py-5: padding vertical (3rem arriba y abajo) 
         -->
-        <!-- 📝 section: bloque de menú -->
         <section id="menu" aria-labelledby="titulo-menu" class="container py-5">
             <!-- 
-            📝 id="menu": ancla para navegación interna
-            📝 aria-labelledby: vincula accesiblemente la sección con su título
-            📝 container: centra y aplica márgenes/padding responsivos
-            📝 py-5: padding vertical (3rem arriba y abajo)
+            📝 h2: título de sección
+            📝 mb-3: margen inferior (1rem aprox.) 
             -->
-            <!-- 📝 h2: título de sección -->
             <h2 id="titulo-menu" class="mb-3">Nuestro menú</h2>
             <!-- 
-            📝 mb-3: margen inferior (1rem aprox.)
+            📝 texto introductorio
+            📝 text-muted: color de texto gris claro 
             -->
-            <!-- 📝 texto introductorio -->
             <p class="text-muted">Bebidas y panes del día</p>
             <!-- 
-            📝 text-muted: color de texto gris claro
+            📝 row: fila de Bootstrap para el grid
+            📝 g-4: gutter (separación entre columnas) de 1.5rem 
             -->
-            <!-- 📝 row: fila de Bootstrap para el grid -->
             <div class="row g-4">
-                <!-- 
-                📝 g-4: gutter (separación entre columnas) de 1.5rem
-                -->
-                <!-- ========== PRIMER PRODUCTO ========== -->
+                <!-- 📝 col-md-4: ocupa 4/12 columnas en pantallas medianas en adelante (3 productos por fila) -->
                 <article class="col-md-4">
                     <!-- 
-                    📝 col-md-4: ocupa 4/12 columnas en pantallas medianas en adelante (3 productos por fila)
+                    📝 card: contenedor estilo tarjeta
+                    📝 border-0: elimina el borde por defecto
+                    📝 h-100: hace que la tarjeta ocupe toda la altura disponible
+                    📝 shadow-lg: sombra grande para dar relieve 
                     -->
                     <div class="card border-0 h-100 shadow-lg">
                         <!-- 
-                        📝 card: contenedor estilo tarjeta
-                        📝 border-0: elimina el borde por defecto
-                        📝 h-100: hace que la tarjeta ocupe toda la altura disponible
-                        📝 shadow-lg: sombra grande para dar relieve
-                        -->
-                        <!-- Imagen del producto -->
-                        <img src="./img/menu/espresso.jpg"
-                            class="card-img-top img-fluid"
-                            alt="Espresso servido en taza cerámica">
-                        <!-- 
                         📝 card-img-top: coloca la imagen en la parte superior de la card
-                        📝 img-fluid: imagen responsiva que se ajusta al ancho
+                        📝 img-fluid: imagen responsiva que se ajusta al ancho 
                         -->
-                        <!-- Contenido principal de la card -->
+                        <img src="./img/menu/espresso.jpg" class="card-img-top img-fluid"
+                            alt="Espresso servido en taza cerámica" />
+                        <!-- 📝 card-body: espacio interno con padding -->
                         <div class="card-body">
                             <!-- 
-                            📝 card-body: espacio interno con padding
+                            📝 d-flex align-items-center gap-2: flexbox para alinear verticalmente título y badge
+                            📝 mb-2: margen inferior para separar del párrafo 
                             -->
-                            <h3 class="card-title fs-4">
-                                Espresso 
-                                <span class="badge bg-warning text-dark">Nuevo</span>
-                            </h3>
-                            <!-- 
-                            📝 card-title: estilo de título en la card
-                            📝 fs-4: fuente tamaño 1.5rem
-                            📝 badge bg-warning text-dark: etiqueta resaltada con fondo amarillo y texto oscuro
-                            -->
-                            <p class="card-text">Extracción precisa, tueste medio.</p>
-                            <!-- 📝 card-text: párrafo descriptivo -->
-                            <table class="table table-sm">
+                            <div class="d-flex align-items-center gap-2 mb-2">
                                 <!-- 
-                                📝 table: tabla con estilos Bootstrap
-                                📝 table-sm: versión compacta con menos padding
+                                📝 card-title: estilo de título en la card
+                                📝 fs-4: tamaño de fuente 1.5rem
+                                📝 mb-0: quita margen inferior del h3 para que quede alineado con el badge 
                                 -->
+                                <h3 class="card-title fs-4 mb-0">Espresso</h3>
+                                <!-- 
+                                📝 badge bg-warning text-dark: etiqueta resaltada con fondo amarillo y texto oscuro
+                                📝 fs-4: tamaño de fuente igual al título para alineación vertical 
+                                -->
+                                <span class="badge bg-warning text-dark fs-4">Nuevo</span>
+                            </div>
+                            <!-- 📝 card-text: párrafo descriptivo -->
+                            <p class="card-text">Extracción precisa, tueste medio.</p>
+                            <!-- 
+                            📝 table.table: tabla estilizada de Bootstrap
+                            📝 table-sm: versión compacta con menos padding 
+                            -->
+                            <table class="table table-sm">
                                 <thead>
                                     <tr>
                                         <th>Tamaño</th>
@@ -146,17 +142,24 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <!-- 
+                            📝 d-flex justify-content-center: contenedor para centrar el botón
+                            📝 btn btn-primary px-4: botón de Bootstrap con estilo principal y padding horizontal 
+                            -->
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary px-4">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </article>
-                <!-- ========== SEGUNDO PRODUCTO ========== -->
+                <!-- Se repite el mismo patrón para los demás productos -->
                 <article class="col-md-4">
                     <div class="card border-0 h-100 shadow-lg">
-                        <img src="./img/menu/latte.jpeg"
-                            class="card-img-top img-fluid"
-                            alt="Latte clásico">
+                        <img src="./img/menu/latte.jpeg" class="card-img-top img-fluid" alt="Latte clásico" />
                         <div class="card-body">
-                            <h3 class="card-title fs-4">Latte</h3>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <h3 class="card-title fs-4 mb-0">Latte</h3>
+                            </div>
                             <p class="card-text">Suave, con leche vaporizada.</p>
                             <table class="table table-sm">
                                 <thead>
@@ -176,18 +179,22 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary px-4">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </article>
-                <!-- ========== TERCER PRODUCTO ========== -->
                 <article class="col-md-4">
                     <div class="card border-0 h-100 shadow-lg">
-                        <img src="./img/menu/croissant.webp"
-                            class="card-img-top img-fluid"
-                            alt="Croissant clásico">
+                        <img src="./img/menu/croissant.webp" class="card-img-top img-fluid" alt="Croissant clásico" />
                         <div class="card-body">
-                            <h3 class="card-title fs-4">Croissant</h3>
-                            <p class="card-text">Hojaldre crujiente y mantequilla de alta calidad.</p>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <h3 class="card-title fs-4 mb-0">Croissant</h3>
+                            </div>
+                            <p class="card-text">
+                                Hojaldre crujiente y mantequilla de alta calidad.
+                            </p>
                             <table class="table table-sm">
                                 <thead>
                                     <tr>
@@ -206,6 +213,9 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary px-4">Comprar</a>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -227,12 +237,15 @@
                     <a class="nav-link p-0 custom-footer-nav-link" href="#terminos">Términos de uso</a>
                 </li>
             </ul>
-            <small class="">Página web hecha por Elda Berenice Matus Valencia para la materia de Diseño de Front-End</small>
+            <small class="">Página web hecha por Elda Berenice Matus Valencia para la materia de
+                Diseño de Front-End</small>
         </div>
     </footer>
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
