@@ -1,127 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafetería Chispas</title>
-    
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
     <!-- CSS personalizado -->
-    <link rel="stylesheet" href="./css/styles.css">
-    
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+  </head>
 
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-    
-    <!-- HEADER: encabezado principal del sitio -->
+  <body class="d-flex flex-column min-vh-100">
+    <!-- ========================================
+         HEADER: Encabezado principal del sitio
+         ======================================== -->
     <header class="sticky-top">
-        <nav aria-label="Navegación principal" class="navbar navbar-expand-lg shadow">
-            <div class="container"> 
-                <div class="d-flex align-items-center w-100">
-                    <div class="flex-shrink-0">
-                        <a class="navbar-brand" href="./index.html"> 
-                            <img id="logo" class="me-2" src="./img/logo.png" alt="Logo de Cafetería Chispas"> 
-                        </a>
-                    </div>
-                    <div class="flex-grow-1 text-truncate me-2">
-                        <span class="fs-4 fs-lg-2 mb-0 text-truncate">Cafetería Chispas</>
-                    </div>
-                    <div class="flex-shrink-0 d-lg-none">
-                        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar_nav">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar_nav">
-                    <ul class="navbar-nav text-center mx-auto mx-lg-0 ms-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./menu.html">Menú</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./articulos.html">Artículos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./galeria.html">Galería</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+      <!-- Navegación principal con Bootstrap -->
+      <nav aria-label="Navegación principal" class="navbar navbar-expand-lg shadow">
+        <div class="container">
+          <!-- Contenedor flexible para el logo y título -->
+          <div class="d-flex align-items-center w-100">
+            <!-- Logo - no se encoge -->
+            <div class="flex-shrink-0">
+              <a class="navbar-brand" href="./index.html">
+                <img
+                  id="logo"
+                  class="me-2"
+                  src="./img/logo.png"
+                  alt="Logo de Cafetería Chispas"
+                />
+              </a>
             </div>
-        </nav>
+
+            <!-- Título - se adapta al espacio disponible -->
+            <div class="flex-grow-1 text-truncate me-2">
+              <span class="fs-4 fs-lg-2 mb-0 text-truncate">Cafetería Chispas</span>
+            </div>
+
+            <!-- Botón hamburguesa - solo visible en móvil -->
+            <div class="flex-shrink-0 d-lg-none">
+              <button
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar_nav"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Menú de navegación colapsable -->
+          <div class="collapse navbar-collapse" id="navbar_nav">
+            <ul class="navbar-nav text-center mx-auto mx-lg-0 ms-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.html">Menú</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./articulos.html">Artículos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./galeria.html">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- MAIN: contenido principal (sólo un <main> por documento)-->
-    <main class="flex-grow-1">
+    <!-- ========================================
+         MAIN: Contenido principal
+         flex-grow-1: Ocupa todo el espacio restante
+         ======================================== -->
+    <main class="flex-grow-1 custom-background">
+      <!-- ========================================
+           SECCIÓN: Artículos del blog
+           ======================================== -->
+      <section
+        id="articulos"
+        aria-labelledby="titulo-articulos"
+        class="container py-5"
+      >
+        <!-- Título de la sección -->
+        <h2 id="titulo-articulos" class="mb-4">Artículos del blog</h2>
 
-        <!-- SECTION Artículos: contenido principal + barra lateral -->
-        <section id="articulos" aria-labelledby="titulo-articulos">
-            <h2 id="titulo-articulos">Artículos del blog</h2>
-            <!-- grid-2 -->
-            <div class="grid-2">
-                <div>
-                    <!-- Dos artículos dentro de la sección -->
-                    <article>
-                        <h3>¿Qué es un espresso perfecto?</h3>
-                        <!-- time con atributo datetime ayuda a máquinas -->
-                        <p class="muted"><time datetime="2025-08-26">agosto de 2025</time> * 3 min de lectura</p>
-                        <p>Un espresso perfecto equilibra aroma, cuerpo y acidez. Factores clave incluyen molienda,
-                            presión y temperatura.</p>
-                        <!-- Enlace "leer más" podría llevar a otra página (aquí simulamos con #)-->
-                        <p><a href="#leer-mas-espresso">Leer más</a></p>
-                    </article>
-                    <article>
-                        <h3>De la finca a tu taza</h3>
-                        <p class="muted"><time datetime="2025-08-10">agosto de 2025</time> * 4 min de lectura</p>
-                        <p>El viaje del café inicia con la selección de granos, seguido de procesos de secado, tueste y
-                            molienda.</p>
-                        <p><a href="#leer-mas-finca">Leer más</a></p>
-                    </article>
+        <!-- Grid responsivo para artículos -->
+        <div class="row g-4">
+          <!-- ==========================================
+               PRIMER ARTÍCULO: Espresso perfecto
+               ========================================== -->
+          <div class="col-12 col-md-6">
+            <!-- Tarjeta con sombra y altura completa -->
+            <div class="card border-0 shadow-sm h-100 p-3">
+              <div class="card-body">
+                <!-- Título del artículo -->
+                <h3 class="card-title fs-5 mb-2">¿Qué es un espresso perfecto?</h3>
+
+                <!-- Metadatos: fecha y tiempo de lectura -->
+                <p class="text-muted mb-3">
+                  <time datetime="2025-08-26">agosto de 2025</time> * 3 min de lectura
+                </p>
+
+                <!-- Descripción del artículo -->
+                <p class="card-text">
+                  Un espresso perfecto equilibra aroma, cuerpo y acidez. Factores clave
+                  incluyen molienda, presión y temperatura.
+                </p>
+
+                <!-- Botón centrado para leer más -->
+                <div class="d-flex justify-content-center mt-3">
+                  <a href="#leer-mas-espresso" class="btn btn-primary px-4">Leer más</a>
                 </div>
+              </div>
             </div>
+          </div>
 
-            <!-- ASIDE: contenido complementario-->
-            <aside aria-label="Información adicional">
-                <h4>Horarios y ubicación</h4>
-                <!-- address: datos de contacto/ubicación; no es para cualquier dirección postal genérica-->
-                <address>
-                    Blvd. Universidad 76, Hermosillo, Sonora<br>
-                    Lun-Sáb: 8:00-20:00 * Dom: 9:00-14:00
-                </address>
-                <p class="muted">Wi-Fi gratis * Pet friendly * Terraza</p>
-            </aside>
-        </section>
+          <!-- ==========================================
+               SEGUNDO ARTÍCULO: De la finca a tu taza
+               ========================================== -->
+          <div class="col-12 col-md-6">
+            <!-- Tarjeta con sombra y altura completa -->
+            <div class="card border-0 shadow-sm h-100 p-3">
+              <div class="card-body">
+                <!-- Título del artículo -->
+                <h3 class="card-title fs-5 mb-2">De la finca a tu taza</h3>
 
+                <!-- Metadatos: fecha y tiempo de lectura -->
+                <p class="text-muted mb-3">
+                  <time datetime="2025-08-10">agosto de 2025</time> * 4 min de lectura
+                </p>
+
+                <!-- Descripción del artículo -->
+                <p class="card-text">
+                  El viaje del café inicia con la selección de granos, seguido de
+                  procesos de secado, tueste y molienda.
+                </p>
+
+                <!-- Botón centrado para leer más -->
+                <div class="d-flex justify-content-center mt-3">
+                  <a href="#leer-mas-finca" class="btn btn-primary px-4">Leer más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- FOOTER: información de cierre -->
+    <!-- ========================================
+         FOOTER: Información de cierre
+         ======================================== -->
     <footer class="mt-auto py-5">
-        <div class="container text-center">
-            <p class="mb-1"><span id="anio">&copy 2025</span> Cafetería Chispas</p>
-            <p class="mb-2">Todos los derechos reservados</p>
-            <ul class="navbar-nav d-flex flex-row gap-2 justify-content-center mb-2">
-                <li class="nav-item">
-                    <a class="nav-link p-0 custom-footer-nav-link" href="#aviso">Aviso de privacidad</a>
-                </li>
-                <span>|</span>
-                <li class="nav-item">
-                    <a class="nav-link p-0 custom-footer-nav-link" href="#terminos">Términos de uso</a>
-                </li>
-            </ul>
-            <small class="">Página web hecha por Elda Berenice Matus Valencia para la materia de Diseño de Front-End</small>
-        </div>
+      <div class="container text-center">
+        <!-- Copyright -->
+        <p class="mb-1">
+          <span id="anio">&copy 2025</span> Cafetería Chispas
+        </p>
+        <p class="mb-2">Todos los derechos reservados</p>
+
+        <!-- Enlaces legales -->
+        <ul class="navbar-nav d-flex flex-row gap-2 justify-content-center mb-2">
+          <li class="nav-item">
+            <a class="nav-link p-0 custom-footer-nav-link" href="#aviso">
+              Aviso de privacidad
+            </a>
+          </li>
+          <span>|</span>
+          <li class="nav-item">
+            <a class="nav-link p-0 custom-footer-nav-link" href="#terminos">
+              Términos de uso
+            </a>
+          </li>
+        </ul>
+
+        <!-- Créditos del desarrollador -->
+        <small>
+          Página web hecha por Elda Berenice Matus Valencia para la materia de
+          Diseño de Front-End
+        </small>
+      </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-</body>
+    <!-- Bootstrap JavaScript Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
