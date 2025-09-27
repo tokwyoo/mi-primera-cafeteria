@@ -59,6 +59,17 @@ footer ul li {
     background-repeat: no-repeat; /* Sin repetición */
 }
 
+/* Fondo de la página de contacto - Con overlay */
+.custom-contact-background {
+    background-color: #a4a29f;
+}
+
+.custom-backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0); /* Fondo semi-transparente */
+}
+
 /* Contenedor principal del carousel - Dimensiones responsivas */
 .custom-carousel-container {
     width: 100%;
@@ -96,6 +107,44 @@ footer ul li {
 
 .custom-text-section p {
     font-size: 1rem !important; /* Tamaño base del párrafo */
+}
+
+/* 
+📝 .form-max: Limita el ancho máximo del formulario
+📝 max-width: 600px
+*/
+.form-max {
+  max-width: 600px;
+}
+
+/* 
+📝 .dog-img: Ajusta tamaño máximo de la imagen
+📝 max-width: 120px
+*/
+.dog-img {
+  max-width: 120px;
+}
+
+/* 
+📝 @keyframes bounce: Define movimiento de rebote
+📝 0%, 100%: Posición inicial y final
+📝 50%: Desplazamiento hacia arriba -10px
+*/
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 
+📝 .bounce-dog: Clase que aplica animación
+📝 animation: bounce 2s infinite ease-in-out -> rebote cada 2s, infinito, suave
+*/
+.bounce-dog {
+  animation: bounce 2s infinite ease-in-out;
 }
 
 /* ================================================================
