@@ -59,15 +59,9 @@ footer ul li {
     background-repeat: no-repeat; /* Sin repetición */
 }
 
-/* Fondo de la página de contacto - Con overlay */
-.custom-contact-background {
-    background-color: #a4a29f;
-}
-
-.custom-backdrop-blur {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0); /* Fondo semi-transparente */
+/* Fondo*/
+.custom-background {
+    background-color: #928678;
 }
 
 /* Contenedor principal del carousel - Dimensiones responsivas */
